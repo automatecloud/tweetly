@@ -25,9 +25,22 @@
     <body>
     
        <img src=https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg width=20%></img>
+
+<!--  let's call out the hostname -->
+        <div class="content">
+            <img src="/static/img/docker_vert.png"/>
+            <h1 class="lsf title">{{ .Title }}</h1>
+            <div class="logs">
+                {{ range $index, $element := .Entries }}
+                <div>{{ $element.Date }}: {{ $element.Addr }}</div>
+                {{ end }}
+            </div>
+            <h4 class="lsf info">served from {{ .Hostname }}</h4>
+        </div>
+<!-- end of insert -->>
        
        <div class="inner">
-            <h1>Welcome to the demo!</h1>
+            <h1>Welcome to my first demo!!</h1>
 			Congratulations on deploying your first Docker container, why not let the world know!
 		
 		  	<p>   
